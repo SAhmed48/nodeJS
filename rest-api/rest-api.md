@@ -81,3 +81,39 @@ I recommend to use config package which is very nice and easy to use.
 3) Add your env specific settings in it.
 4) Go to your main index.js file.
 5) Import config package.
+
+#### Debugging
+
+Lot of times we use console.log() at different places in application for debugging.
+To avoid console.log() can we use third party package **debug** we helps us to debug application.
+
+-- npm i debug
+
+1) Import package in any file on the start.
+
+-- const debug = require('debug')('app:namespace); 
+// you can set different namespace here. 
+// Debug only DB then namespace should be **'app:db'**
+
+debug('Your debug Message');
+
+Set debug mode from environments variables.
+
+export DEBUG=app:* // * wildcard for every namespace.
+
+export DEBUG=app:db // only console logs of db namespace.
+
+#### Templating Engine
+
+Sometimes we need to show html to users. So we use templates in express.
+
+The templating engine are:
+1) Pug
+2) Mostache
+3) Ejs
+
+-- npm i Pug
+
+// Setting templating engine
+app.set('view engine', 'pug'); // set template engine to Pug
+app.set('views', './views'); // default set dir of views
