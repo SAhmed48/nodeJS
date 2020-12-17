@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const helmet = require('helmet');
+const morgan = require('morgan');
 const express = require('express');
 const Joi = require('joi');
 const logger = require('./middlewares/logger'); // import custom middleware
@@ -9,7 +11,12 @@ const port = process.env.PORT || 9000;
 const app = express();
 
 // Middlewares
-app.use(express.json());
+app.use(express.json()); // Add client json data into req.body of server.
+app.use(express.urlencoded({ extended: true })); // convert x-www-formdata into key=value&&key=value
+app.use(helmet()); // http headers attack.
+app.use(morgan('tiny')); // console logging request url.
+app.use(express.static('public')) // serve static files from public folder
+
 
 // custom middleware
 app.use(logger);

@@ -55,4 +55,4 @@ There are few things to note:
 3) next: The next is use to pass control to next middleware function in the request processing pipeline.
 
 **Note**:
-If we not use next() function here then our control halt here and it does not pass control to next middleware.
+If we not use next() function in middleware then control stall and it does not pass control to next middleware.
