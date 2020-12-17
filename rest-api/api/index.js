@@ -17,7 +17,6 @@ app.use(helmet()); // http headers attack.
 app.use(morgan('tiny')); // console logging request url.
 app.use(express.static('public')) // serve static files from public folder
 
-
 // custom middleware
 app.use(logger);
 
