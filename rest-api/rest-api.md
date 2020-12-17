@@ -56,3 +56,28 @@ There are few things to note:
 
 **Note**:
 If we not use next() function in middleware then control stall and it does not pass control to next middleware.
+
+#### Env
+
+Get env information using 
+-- app.get('env')
+
+If env is set from command line as production then it outputs production otherwise development.
+
+We can also get env variable using.
+-- process.env.NODE_ENV // if set then value otherwise undefined
+
+
+### Configurations
+In this section we see how to use different configurations for production, development and staging env.
+
+Two most popular packages:
+1) rc
+2) config
+
+I recommend to use config package which is very nice and easy to use.
+1) Create a config folder.
+2) Create your envs json files (default.json, development.json, production.json)
+3) Add your env specific settings in it.
+4) Go to your main index.js file.
+5) Import config package.

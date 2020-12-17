@@ -1,4 +1,5 @@
-require('dotenv').config();
+require('dotenv').config(); // load config from .env file.
+const config = require('config'); // config package to load configuration from json
 
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -7,14 +8,23 @@ const Joi = require('joi');
 const logger = require('./middlewares/logger'); // import custom middleware
 
 const port = process.env.PORT || 9000;
-
 const app = express();
+
+// Configuration Variables
+
+console.log(`Application name: ${config.get('app-name')}`);
+console.log(`Direct mail host: ${config.get('mail.host')}`);
+console.log(`Mail Server: ${JSON.stringify(config.get('mail'))}`);
 
 // Middlewares
 app.use(express.json()); // Add client json data into req.body of server.
 app.use(express.urlencoded({ extended: true })); // convert x-www-formdata into key=value&&key=value
 app.use(helmet()); // http headers attack.
-app.use(morgan('tiny')); // console logging request url.
+
+// app.get('env') give us development if it is not set from command line.
+if(app.get('env') === 'development'){
+    app.use(morgan('tiny')); // console logging request url.
+}
 app.use(express.static('public')) // serve static files from public folder
 
 // custom middleware
