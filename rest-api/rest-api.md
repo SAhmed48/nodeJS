@@ -117,3 +117,10 @@ The templating engine are:
 // Setting templating engine
 app.set('view engine', 'pug'); // set template engine to Pug
 app.set('views', './views'); // default set dir of views
+
+
+#### Data integration
+
+Adding the capability to connect databases to Express apps is just a matter of loading an appropriate Node.js driver for the database in your app. Please visit this link to get more idea and use of different databases.
+
+https://expressjs.com/en/guide/database-integration.html
