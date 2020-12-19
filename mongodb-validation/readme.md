@@ -1,0 +1,1 @@
+In this section we can see how to validate mongo-db schema, data types.
