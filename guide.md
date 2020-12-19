@@ -3,13 +3,13 @@
 ## How this repo is structured.
 
 ###### What is NodeJS?
-Ryan Dahl is a creator of NodeJS. He thinks why not we can execute javascript outside of browser, So he took chrome V8 JS engine and embed it into c++ code and named it node.exe and run similar to browser, now node use javascript and run on server side. Node is not a programming langauge. It is a runtime envrinoment for executing javascript code outside browser. Quite often we can use nodejs to build backend-services like APIs (Application programming interfaces). These services helps our client side applications like (Web-applications, mobile applications) to work efficiently. Using nodeJS at backend we can save, store data, send email, push notifications etc.
+Ryan Dahl is the creator of NodeJS. He thinks why not we can execute javascript outside of a browser, So he took chrome V8 JS engine and embed it into c++ code and named it node.exe and run similar to browser, now node use javascript and run on the server-side. Node is not a programming language. It is a runtime environment for executing javascript code outside the browser. Quite often we can use nodejs to build backend-services like APIs (Application programming interfaces). These services helps our client-side applications like (Web-applications, mobile applications) to work efficiently. Using node at backend we can save, store data, send email, push notifications etc.
 
-NodeJS is a ideal for building highly-scalable, data intensive and real-time applications because of non-blocking behaviour (asynchronous) architecture.
-It is a single threaded. lets look into it. 
+Node is a ideal for building highly-scalable, data-intensive and real-time applications because of non-blocking behaviour (asynchronous) architecture.
+It is single-threaded. lets look into it. 
 
 How it works:
-A request (fetch data) comes to single thread. The thread call database to fetch data. In the same time another request come and thread start serving it. When First request fetch data from db complete then thread return it as a response.
+A request (fetch data) comes to single-thread. The thread call database to fetch data. In the same time another request come and thread start serving it. When First request fetch data from db complete then thread return it as a response.
 
 Single thread all works using **EVENT QUEUE**. It mointors the event QUEUE and check if data is ready or not.
 
