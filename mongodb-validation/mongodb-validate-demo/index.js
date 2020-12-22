@@ -13,7 +13,7 @@ const userSchema = new Schema({
         minlength: 5,
         maxlength: 15,
         // lowercase: true, // lowercase save string
-        // uppercase: true, // lowercase save string
+        // uppercase: true, // uppercase save string
         // trim: true // remove spaces and dashes from string
         // match: /pattern/ // want to match any regex
     }, // add validation this field is required.
