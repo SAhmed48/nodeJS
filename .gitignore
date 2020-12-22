@@ -44,6 +44,7 @@ npm-guide/node_modules/*
 rest-api/api/node_modules/*
 mongodb-ops/mongo-demo/node_modules/*
 mongodb-validation/mongodb-validate-demo/node_modules/*
+mongodb-modeling/demo-app/node_modules/*
 jspm_packages/
 
 # TypeScript v1 declaration files

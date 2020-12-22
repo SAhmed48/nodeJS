@@ -52,3 +52,13 @@ Each approach has its own weakness and constraints.
 Which approach to use depends on the application, scenario and its query requirements. 
 The best approach to design schema in NoSql databases is based on the query requirements.
 There is a trade-off between query performance and consistency.
+
+#### Get reference document.
+
+```
+const courses = await Course
+    .find()
+    .populate('author', 'name bio website -_id')
+    .select('name author')
+```
+mongoose populate method is use to get reference documents. The second parameter of populate method contains the fields to get from the reference document. **-** means to exclude the **_id** field.
