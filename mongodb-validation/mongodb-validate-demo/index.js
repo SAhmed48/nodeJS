@@ -20,7 +20,7 @@ const userSchema = new Schema({
     userType: {
         type: String,
         required: true,
-        enum: ['super_admin','admin', 'normal'] // validator: only get these values to store.
+        enum: ['super_admin','admin', 'normal'] // validator: only these values to store.
     },
     age: Number,
     isAdult: {
