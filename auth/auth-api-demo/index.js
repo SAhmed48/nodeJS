@@ -1,6 +1,7 @@
 const express = require('express');
 const connectDB = require('./db/connect');
 const users = require('./routes/users');
+const auth = require('./routes/auth');
 
 const port = process.env.PORT || 9000;
 
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // routes
 app.use('/api/users', users);
+app.use('/api/auth', auth);
 
 app.listen(port, () => {
     connectDB((success, kwargs) => {
