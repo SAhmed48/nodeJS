@@ -56,9 +56,9 @@ Increase 2x req/sec and 35% faster response time.
 - How Asynchronous and synchronous javascript works.
 - How callbacks, promises and async/await works.
 
-#### Section 5: Stroing Data into MongoDB
+#### Section 5: Store data in MongoDB.
 - What is NoSql?
-- How to use Mongodb in nodeJS.
+- How to use MongoDB in nodeJS.
 - How to store, retrieve, update, and delete data from MongoDB.
 
 #### Section 6: Authentication and Authorization
@@ -67,7 +67,7 @@ Increase 2x req/sec and 35% faster response time.
 
 #### Section 7: Handling and Logging Errors
 - How to handle server-side errors.
-- How log errors in production application.
+- How to log errors in a production application.
 
 #### Section 8: Unit Testing Integration
 - What is unit testing?
