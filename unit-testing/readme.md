@@ -165,3 +165,8 @@ describe('Absolute', () => {
     });
 });
 ```
+
+Run tests continuously on code change.
+```
+"test":"jest --watchAll"
+```
