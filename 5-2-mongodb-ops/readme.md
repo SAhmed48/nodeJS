@@ -2,9 +2,13 @@ MongoDB is a NoSql database. It does not have a schema and design mechanism like
 It has a flexible schema.
 
 It has 2 terms:
-   NoSql           SQl
-Collections ----- tables
-Documents ------ Rows
+---
+
+| NoSql         | SQl          
+| ------------- |:------------- |
+| Collections   | tables        |
+| Documents     | Rows          |
+
 
 #### Install MongoDB on MAC Os
 
@@ -81,7 +85,7 @@ We have three approaches to update the doc in mongodb:
 
 1) Using find and save methods.
 Example: 
-
+```
 const user = await User.find({_id: userid });
 user.firstname = 'New name';
 const result = user.save();
@@ -105,7 +109,7 @@ const user = await User.findByIdAndUpdate(userid, {
 }, { new : true });
 
 Output contains a updated user object.
-
+```
 
 #### Removing Documents
 
