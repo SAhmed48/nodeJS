@@ -40,12 +40,13 @@ build/Release
 
 # Dependency directories
 node_modules/
-npm-guide/node_modules/*
-rest-api/api/node_modules/*
-mongodb-ops/mongo-demo/node_modules/*
-mongodb-validation/mongodb-validate-demo/node_modules/*
-mongodb-modeling/demo-app/node_modules/*
-auth/auth-api-demo/node_modules/*
+1-npm-guide/node_modules/*
+3-rest-api/api/node_modules/*
+5-2-mongodb-ops/mongo-demo/node_modules/*
+5-3-mongodb-validation/mongodb-validate-demo/node_modules/*
+5-2-mongodb-modeling/demo-app/node_modules/*
+6-auth/auth-api-demo/node_modules/*
+8-unit-testing/testing-demo/node_modules/*
 jspm_packages/
 
 # TypeScript v1 declaration files
