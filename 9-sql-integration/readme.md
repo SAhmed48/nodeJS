@@ -21,6 +21,15 @@ In this section we learn:
 ```
 npm install i mysql2
 ```
+#### Sequelize
+It is a third party object relation mapping library.It do all the heavy lifting of sql behind the scenes and return us javascript object.
+
+```
+Models          ------->  e.g User, Products etc
+Model Instances ------->  e.g user = User.build();
+Queries           ------->  e.g User.findAll();
+Associations    -------> e.g User.hasMany(Products);
+```
 
 
 
