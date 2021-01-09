@@ -1,7 +1,7 @@
 ## NodeJS Learning Path
 
 ##### What is NodeJS ?
-Ryan Dahl is the creator of NodeJS. He thinks why not we can execute javascript outside of a browser, So he took chrome V8 JS engine and embed it into c++ code and named it **node.exe** and run it similar to browser, now node uses javascript and runs on the server-side. 
+Ryan Dahl is the creator of NodeJS. He thinks why not we can execute javascript outside the browser, So he took chrome V8 JS engine and embed it into c++ code and named it **node.exe** and run it similar to browser, now node uses javascript and runs on the server-side. 
 
 Node is not a programming language. It is a runtime environment for executing javascript code outside the browser. 
 
