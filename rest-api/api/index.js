@@ -28,6 +28,9 @@ app.set('views', './views'); // default set dir of views
 // Middlewares
 app.use(express.json()); // Add client json data into req.body of server.
 app.use(express.urlencoded({ extended: true })); // convert x-www-formdata into key=value&&key=value
+// we can also use body-parser package here to handle req.body.
+// const bodyParser = require('body-parser');
+
 app.use(helmet()); // http headers attack.
 
 // app.get('env') give us development if it is not set from command line.
@@ -43,5 +46,21 @@ app.use(logger);
 // Routes 
 app.use('/', index);
 app.use('/api/v1/courses', index);
+
+// send form from express
+app.get('/add', (req, res, next) => {
+    res.send("<html><form action='/add-product' method='POST'><input name='name'></input><button type='submit'>Add product name</button></form>");
+});
+
+// redirect to home page.
+aap.post('/add-product', (req, res, next) => {
+    console.log('FORM response', req.body);
+    res.redirect('/');
+});
+
+// no routes match.
+app.use((req, res, next) => {
+    res.status(404).send('<h3> Page not Found. </h3>');
+});
 
 app.listen(port, () => { console.log('Server Start listening Properly..')});
