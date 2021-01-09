@@ -1,15 +1,15 @@
 In this section, we are going to see how javascript works synchronously and asynchronously.
 
-Javascript is a single-threaded language. 
-It does not handle tasks concurrently, 
-Tt just schedule a task to execute later on. 
-It maintains an event loop and look in it to see schedule task is ready to output.
+1) Javascript is a single-threaded language. 
+2) It does not handle tasks concurrently, 
+3) It just schedules a task to execute later on. 
+4) It maintains an event loop and looks in it to see schedule task is ready to output.
 
-Synchronous means blocking.
-Asynchronous means non-blocking.
+**Synchronous means blocking.**
+**Asynchronous means non-blocking.**
 
 For example:
-
+```
 function add(a,b){
     return a + b;
 }
@@ -34,11 +34,12 @@ Addition output 6
 Multiplication output undefined
 Subtraction output -2
 Multiplication out 18
+```
 
 #### How we can stop and wait for async to finish and store their result?
 
 In the above example we got **Multiplication output undefined**, the reason is the program does not wait for output.
-How to wait for async functions to finish and assigned its output value
+How to wait for async functions to finish and assign their output value
 we have three patterns to achieve this:
 
 1) Callbacks // old one
@@ -48,7 +49,7 @@ we have three patterns to achieve this:
 #### What is a promise?
 
 An object which holds an eventual result of an asynchronous operation.
-A promise can give us output it promised.
+A promise can give us the output it promised.
 
 The output can be in three forms:
 
